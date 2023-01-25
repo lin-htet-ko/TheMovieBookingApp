@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clCI"
+    android:padding="@dimen/margin_medium"
+    tools:context=".activities.CardInfoActivity">
+
+    <include
+        android:id="@+id/vpCiAppbar"
+        layout="@layout/view_pod_simple_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tilCiCardNumberLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_card_number"
+            android:textSize="@dimen/text_regular_2x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieCiCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_password"
+            android:inputType="number"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilCiCardNumberLabel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tilCiCardHolderLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_card_holder"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_regular_2x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tieCiCardNumber"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tilCiCardHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_mg_mg"
+            android:inputType="text"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilCiCardHolderLabel" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tilCiExpireDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_expiration_date"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_regular_2x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tilCiCVCLabel"
+            app:layout_constraintTop_toBottomOf="@id/tilCiCardHolder"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieCiExpireDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_date"
+            android:inputType="date"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium"
+            app:layout_constraintEnd_toStartOf="@id/tilCiCVC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilCiExpireDateLabel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tilCiCVCLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_cvc"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:textSize="@dimen/text_regular_2x"
+            app:layout_constraintStart_toEndOf="@id/tilCiExpireDateLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilCiCardHolder"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tilCiCVC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_password"
+            android:inputType="number"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tieCiExpireDate"
+            app:layout_constraintTop_toBottomOf="@id/tilCiExpireDateLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCiPmConfirm"
+        style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_btn_size"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:background="@drawable/background_btn_confirm"
+        android:text="@string/lbl_confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:elevation="@dimen/margin_medium" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

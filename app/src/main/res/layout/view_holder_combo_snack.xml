@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/margin_medium_2">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvComboSnackSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="ComboSnack set M"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="@dimen/text_regular_2x"
+        app:layout_constraintEnd_toStartOf="@id/glVhComboSnack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVhComboSnack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvComboSnackPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="15$"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="@id/tvComboSnackSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glVhComboSnack"
+        app:layout_constraintTop_toTopOf="@id/tvComboSnackSize" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvComboSnackDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        tools:text="ComboSnack Size M 22oz Coke(X1) and large popcorn(X1)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/glVhComboSnack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvComboSnackSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnComboSnackSubSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="-"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/background_combo_substract_sign"
+        app:layout_constraintEnd_toStartOf="@id/tvComboSnackCount"
+        app:layout_constraintStart_toEndOf="@id/glVhComboSnack"
+        app:layout_constraintTop_toBottomOf="@id/tvComboSnackPrice" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvComboSnackCount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:text="0"
+        android:gravity="center"
+        android:background="@drawable/background_combo_count"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/btnComboSnackSubSign"
+        app:layout_constraintEnd_toStartOf="@id/btnComboSnackPlusSign"
+        app:layout_constraintStart_toEndOf="@id/btnComboSnackSubSign"
+        app:layout_constraintTop_toTopOf="@id/btnComboSnackSubSign" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnComboSnackPlusSign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="+"
+        android:background="@drawable/background_combo_plus_sign"
+        app:layout_constraintBottom_toBottomOf="@id/tvComboSnackCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvComboSnackCount"
+        app:layout_constraintTop_toTopOf="@id/tvComboSnackCount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

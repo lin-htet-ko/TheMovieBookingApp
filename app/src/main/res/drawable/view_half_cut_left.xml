@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:topRightRadius="@dimen/radius_half_cut_voucher"
+        android:bottomRightRadius="@dimen/radius_half_cut_voucher"/>
+
+    <solid android:color="@color/color_voucher_background"/>
+</shape>

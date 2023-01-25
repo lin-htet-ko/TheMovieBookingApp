@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/height_payment_card"
+    android:elevation="@dimen/margin_medium"
+    android:layout_marginVertical="@dimen/margin_medium_2"
+    android:background="@drawable/background_payment_card"
+    android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVhPcBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:text="VISA"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnVhPcMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_more_horiz_24"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVhPcNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:gravity="center|center_vertical"
+                android:letterSpacing="0.5"
+                tools:text="@string/lbl_payment_card"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVhPcBrand" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVhPcHolderLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:alpha="0.6"
+                android:text="@string/lbl_card_holder"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVhPcNumber" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVhPcHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                tools:text="Lin Htet Ko"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVhPcHolderLabel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVhPcExpireLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:alpha="0.6"
+                android:text="@string/lbl_expires"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvVhPcHolderLabel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVhPcExpire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="08/22"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintTop_toBottomOf="@id/tvVhPcExpireLabel"
+                app:layout_constraintEnd_toEndOf="@id/tvVhPcExpireLabel"
+                android:textSize="@dimen/text_regular"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

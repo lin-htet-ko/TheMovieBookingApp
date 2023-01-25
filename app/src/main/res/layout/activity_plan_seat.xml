@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clPlantSeat"
+    tools:context=".activities.PlanSeatActivity">
+
+    <include
+        android:id="@+id/vpPsActionbar"
+        layout="@layout/view_pod_simple_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/text_big_3x">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsMovieName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textAlignment="center"
+                android:alpha="0.9"
+                tools:text="Detective Pikachu"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="@dimen/text_heading_1x"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsCinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                tools:text="Galaxy Cinema - Golden City"
+                android:textSize="@dimen/text_regular_3x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPsMovieName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsDateAndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:alpha="0.7"
+                tools:text="Wednesday, 10 May, 07:00 PM"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="@dimen/text_regular_3x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPsCinema" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPsCurvedLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:paddingHorizontal="@dimen/margin_xlarge"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="@id/tvPsDateAndTime"
+                app:layout_constraintStart_toStartOf="@id/tvPsDateAndTime"
+                app:layout_constraintTop_toBottomOf="@id/tvPsDateAndTime"
+                app:srcCompat="@drawable/curved_line" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPsSeats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivPsCurvedLine"
+                app:spanCount="10"
+                tools:itemCount="70"
+                tools:listitem="@layout/view_holder_seat" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icPsAvailable"
+                android:layout_width="@dimen/size_icon_general"
+                android:layout_height="@dimen/size_icon_general"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:background="@color/colorGray"
+                app:layout_constraintEnd_toStartOf="@+id/tvPsAvailable"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvPsSeats"
+                app:shapeAppearance="@style/img_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:text="@string/lbl_available"
+                app:layout_constraintBottom_toBottomOf="@id/icPsAvailable"
+                app:layout_constraintEnd_toStartOf="@+id/icPsReversed"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/icPsAvailable"
+                app:layout_constraintTop_toTopOf="@id/icPsAvailable" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icPsReversed"
+                android:layout_width="@dimen/size_icon_general"
+                android:layout_height="@dimen/size_icon_general"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:background="@color/colorReserved"
+                app:layout_constraintBottom_toBottomOf="@id/tvPsAvailable"
+                app:layout_constraintEnd_toStartOf="@+id/tvPsReversed"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvPsAvailable"
+                app:layout_constraintTop_toTopOf="@id/tvPsAvailable"
+                app:shapeAppearance="@style/img_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsReversed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:text="@string/lbl_reversed"
+                app:layout_constraintBottom_toBottomOf="@id/icPsReversed"
+                app:layout_constraintEnd_toStartOf="@+id/icPsYourSelection"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/icPsReversed"
+                app:layout_constraintTop_toTopOf="@id/icPsReversed" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icPsYourSelection"
+                android:layout_width="@dimen/size_icon_general"
+                android:layout_height="@dimen/size_icon_general"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:background="@color/colorPrimaryLightMode"
+                app:layout_constraintBottom_toBottomOf="@id/tvPsReversed"
+                app:layout_constraintEnd_toStartOf="@+id/tvPsYourSelection"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvPsReversed"
+                app:layout_constraintTop_toTopOf="@id/tvPsReversed"
+                app:shapeAppearance="@style/img_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsYourSelection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:text="@string/lbl_your_selection"
+                app:layout_constraintBottom_toBottomOf="@id/icPsYourSelection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/icPsYourSelection"
+                app:layout_constraintTop_toTopOf="@id/icPsYourSelection" />
+
+            <View
+                android:id="@+id/dlPsLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/general_conner_radius"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:background="@drawable/dash_line_voucher"
+                android:layerType="software"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icPsAvailable" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsTicketLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_ticket"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintStart_toStartOf="@id/dlPsLine"
+                app:layout_constraintTop_toBottomOf="@id/dlPsLine" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsTicketNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                tools:text="2"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintBottom_toBottomOf="@id/tvPsTicketLabel"
+                app:layout_constraintEnd_toEndOf="@id/dlPsLine"
+                app:layout_constraintTop_toTopOf="@id/tvPsTicketLabel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsSeatsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_seat"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvPsTicketLabel"
+                app:layout_constraintTop_toBottomOf="@id/tvPsTicketLabel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPsSeatsNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                tools:text="D/Row 5,6"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintBottom_toBottomOf="@id/tvPsSeatsLabel"
+                app:layout_constraintEnd_toEndOf="@id/tvPsTicketNum"
+                app:layout_constraintTop_toTopOf="@id/tvPsSeatsLabel" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPsConfirm"
+        style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_btn_size"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:background="@drawable/background_btn_confirm"
+        tools:text="@string/lbl_buy_ticket_for_s"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:elevation="@dimen/margin_medium" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

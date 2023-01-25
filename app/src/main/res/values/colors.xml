@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow_500">#FBC02D</color>
+
+    <color name="colorPrimaryLightMode">#623eea</color>
+    <color name="colorPrimaryDarkMode">#623eea</color>
+    <color name="colorWhiteAlpha80">#CCFFFFFF</color>
+    <color name="colorGray">#D5D2D2</color>
+    <color name="colorReserved">#878686</color>
+    <color name="colorGreenLight">#13c18c</color>
+    <color name="colorPaymentCardEnd">#B39DDB</color>
+    <color name="colorPaymentCardStart">#673AB7</color>
+    <color name="color_voucher_background">#F1F0F0</color>
+</resources>

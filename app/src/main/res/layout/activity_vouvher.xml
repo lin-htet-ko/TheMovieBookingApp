@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clVoucher"
+    android:background="@color/color_voucher_background"
+    tools:context=".activities.VoucherActivity">
+
+    <include
+        android:id="@+id/vpVcAppbar"
+        layout="@layout/view_pod_simple_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVcAwesomeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_awesome"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVcUrTicketLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/lbl_this_is_your_ticket"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVcAwesomeLabel" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvVcBackground"
+                android:layout_width="match_parent"
+                app:cardElevation="0.1dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVcUrTicketLabel">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivVcMovieImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_voucher_image"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@drawable/place_holder_pikachu" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcMovieName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:alpha="0.75"
+                        tools:text="Detective Pikachu"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivVcMovieImg" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcMovieDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        tools:text="105m - "
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_regular_2x"
+                        app:layout_constraintStart_toStartOf="@id/tvVcMovieName"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcMovieName" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcIm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=" IMAX"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_regular_2x"
+                        app:layout_constraintBottom_toBottomOf="@id/tvVcMovieDuration"
+                        app:layout_constraintStart_toEndOf="@id/tvVcMovieDuration"
+                        app:layout_constraintTop_toTopOf="@id/tvVcMovieDuration" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/dlVcTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_dash"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layerType="software"
+                        android:src="@drawable/dash_line_voucher"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcMovieDuration" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcBookingNoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/lbl_booking_no"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dlVcTop" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcBookingNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:alpha="0.6"
+                        tools:text="0XGS384349"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvVcBookingNoLabel"
+                        app:layout_constraintTop_toTopOf="@id/tvVcBookingNoLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcShowingTimeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/lbl_show_time_date"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcBookingNoLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcShowingTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:alpha="0.6"
+                        tools:text="7:00 PM - 10 May"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvVcShowingTimeLabel"
+                        app:layout_constraintTop_toTopOf="@id/tvVcShowingTimeLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcTheaterLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/lbl_theater"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcShowingTimeLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcTheater"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:alpha="0.6"
+                        tools:text="Galaxy Cinema - Golden City"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvVcTheaterLabel"
+                        app:layout_constraintTop_toTopOf="@id/tvVcTheaterLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcScreenLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/lbl_screen"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcTheaterLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcScreen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:alpha="0.6"
+                        tools:text="2"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvVcScreenLabel"
+                        app:layout_constraintTop_toTopOf="@id/tvVcScreenLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcRowLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/lbl_row"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcScreenLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcRow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:alpha="0.6"
+                        tools:text="D"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvVcRowLabel"
+                        app:layout_constraintTop_toTopOf="@id/tvVcRowLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcSeatsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/lbl_seat"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcRowLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcSeats"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:alpha="0.6"
+                        tools:text="5, 6"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvVcSeatsLabel"
+                        app:layout_constraintTop_toTopOf="@id/tvVcSeatsLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcPriceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/lbl_price"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcSeatsLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVcPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:alpha="0.6"
+                        tools:text="$ 40.00"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvVcPriceLabel"
+                        app:layout_constraintTop_toTopOf="@id/tvVcPriceLabel" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/dlVcBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_dash"
+                        android:layout_marginTop="@dimen/margin_medium_3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvVcPriceLabel"
+                        app:srcCompat="@drawable/dash_line_voucher" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivVcQrCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium_3"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dlVcBottom"
+                        tools:srcCompat="@drawable/placeholder_barcode" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/view_half_cut_right"
+                        app:layout_constraintBottom_toBottomOf="@id/dlVcTop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/dlVcTop" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/view_half_cut_left"
+                        app:layout_constraintBottom_toBottomOf="@id/dlVcTop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/dlVcTop" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/view_half_cut_right"
+                        app:layout_constraintBottom_toBottomOf="@id/dlVcBottom"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/dlVcBottom" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/view_half_cut_left"
+                        app:layout_constraintBottom_toBottomOf="@id/dlVcBottom"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/dlVcBottom" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

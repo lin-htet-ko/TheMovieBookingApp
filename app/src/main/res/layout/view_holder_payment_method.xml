@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/margin_medium_2"
+    android:paddingHorizontal="@dimen/margin_medium_2">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivVhPmCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_credit_card_24"
+        app:tint="?attr/colorOnSurface" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVhPmCardType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:alpha="0.7"
+        tools:text="Credit Card"
+        android:textSize="@dimen/text_regular_2x"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintBottom_toTopOf="@id/tvVhPmCardCategory"
+        app:layout_constraintStart_toEndOf="@id/ivVhPmCard"
+        app:layout_constraintTop_toTopOf="@id/ivVhPmCard" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVhPmCardCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        tools:text="Visa, master card and JCB"
+        app:layout_constraintBottom_toBottomOf="@id/ivVhPmCard"
+        app:layout_constraintStart_toStartOf="@id/tvVhPmCardType"
+        app:layout_constraintTop_toBottomOf="@id/tvVhPmCardType"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

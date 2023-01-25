@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:paddingHorizontal="@dimen/margin_medium_2"
+    android:paddingTop="@dimen/margin_xxxlarge">
+
+<!--    <com.google.android.material.imageview.ShapeableImageView-->
+<!--        android:id="@+id/ivDmProfile"-->
+<!--        android:layout_width="@dimen/general_btn_size"-->
+<!--        android:layout_height="@dimen/general_btn_size"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:shapeAppearance="@style/img_circle"-->
+<!--        app:srcCompat="@drawable/placeholder_profile" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvDmName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="@dimen/margin_medium_2"-->
+<!--        android:layout_toEndOf="@id/ivDmProfile"-->
+<!--        android:alpha="0.9"-->
+<!--        android:text="@string/placeholder_mg_mg"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/text_regular_2x"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/tvDmEmail"-->
+<!--        app:layout_constraintStart_toEndOf="@id/ivDmProfile"-->
+<!--        app:layout_constraintTop_toTopOf="@id/ivDmProfile" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvDmEmail"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="@dimen/margin_medium_2"-->
+<!--        android:alpha="0.8"-->
+<!--        android:text="linhtetko@gmail.com"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/ivDmProfile"-->
+<!--        app:layout_constraintStart_toEndOf="@id/ivDmProfile"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvDmName" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvDmEdit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginEnd="@dimen/margin_medium_2"-->
+<!--        android:alpha="0.9"-->
+<!--        android:text="@string/lbl_edit"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/tvDmEmail"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/tvDmEmail" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpDmPromoCode"-->
+<!--        layout="@layout/view_pod_drawer_menu_item"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/margin_medium_2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ivDmProfile" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpDmLanguage"-->
+<!--        layout="@layout/view_pod_drawer_menu_item"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vpDmPromoCode" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpDmTermAndService"-->
+<!--        layout="@layout/view_pod_drawer_menu_item"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vpDmLanguage" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpDmHelp"-->
+<!--        layout="@layout/view_pod_drawer_menu_item"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vpDmTermAndService" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpDmRateUs"-->
+<!--        layout="@layout/view_pod_drawer_menu_item"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vpDmHelp" />-->
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/vpDmLogout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:elevation="0dp"-->
+<!--        app:icon="@drawable/ic_baseline_logout_24"-->
+<!--        app:iconGravity="end"-->
+<!--        android:textAlignment="viewEnd"-->
+<!--        android:textSize="@dimen/text_regular_2x"-->
+<!--        android:text="@string/lbl_logout"-->
+<!--        style="@style/Widget.Material3.Button.UnelevatedButton"-->
+<!--        android:layout_marginBottom="@dimen/margin_xlarge"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

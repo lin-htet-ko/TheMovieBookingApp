@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/margin_medium"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginTop="@dimen/margin_medium_2">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="@dimen/margin_medium_2"
+        android:paddingHorizontal="@dimen/margin_medium_2"
+        android:textAlignment="center"
+        android:background="@drawable/background_btn_auth"
+        android:textColor="?attr/colorOnSurface"
+        android:alpha="0.6"
+        tools:text="9:30 AM" />
+</FrameLayout>

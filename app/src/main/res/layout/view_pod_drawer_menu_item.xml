@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.linhtetko.themoviebookingapp.viewpods.DrawerMainItemViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llVpDrawerMenuItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_xlarge"
+    tools:background="?attr/colorPrimary">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivVpDmiIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_baseline_local_offer_24"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVpDmiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:alpha="0.9"
+        android:text="@string/app_name"
+        android:textColor="@color/white" />
+</com.linhtetko.themoviebookingapp.viewpods.DrawerMainItemViewPod>

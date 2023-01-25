@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clCCAT"
+    tools:context=".activities.ChooseCinemaAndTimeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/size_empty">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnCcAtBack"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/white"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_left_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCcAtDates"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnCcAtBack"
+                    tools:listitem="@layout/view_holder_date" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_medium_2"
+                android:background="@drawable/background_toolbar_movie_detail"
+                android:layout_gravity="bottom"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCcAtCinemaAndTimes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:elevation="@dimen/margin_large"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_xxxlarge"
+        android:clipToPadding="false"
+        tools:listitem="@layout/view_holder_time_and_cinema"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCcAtNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_gravity="bottom"
+        android:text="@string/lbl_next"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:textColor="@color/white"
+        android:background="@drawable/background_btn_confirm"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

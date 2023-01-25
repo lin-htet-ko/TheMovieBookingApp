@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        tools:context=".fragments.SignUpFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_name"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieSignUpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_mg_mg"
+            android:inputType="text"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:text="@string/lbl_email"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieSignUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_abc_gmail_com"
+            android:inputType="textEmailAddress"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:text="@string/lbl_phone"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieSignUpPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_09"
+            android:inputType="phone"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:text="@string/lbl_password"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieSignUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:hint="@string/placeholder_password"
+            android:inputType="textPassword"
+            android:minHeight="@dimen/margin_xxlarge"
+            android:paddingStart="@dimen/margin_medium" />
+
+
+        <include
+            android:id="@+id/vpAuthSignUp"
+            layout="@layout/view_pod_auth_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

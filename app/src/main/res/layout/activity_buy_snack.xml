@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clBS"
+    tools:context=".activities.BuySnackActivity">
+
+    <include
+        android:id="@+id/vpBuySnackAb"
+        layout="@layout/view_pod_simple_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComboItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="3"
+                tools:listitem="@layout/view_holder_combo_snack" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etBuySnackPromoCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_2"
+                android:hint="@string/lbl_enter_promo_code"
+                android:inputType="number"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvComboItems" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBuySnackDontHaveCouponLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_don_t_have_any_promo_code"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintStart_toStartOf="@id/etBuySnackPromoCode"
+                app:layout_constraintTop_toBottomOf="@id/etBuySnackPromoCode" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBuySnackGetCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:alpha="0.8"
+                android:text="@string/lbl_get_it_now"
+                android:textColor="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="@id/tvBuySnackDontHaveCouponLabel"
+                app:layout_constraintStart_toEndOf="@id/tvBuySnackDontHaveCouponLabel"
+                app:layout_constraintTop_toTopOf="@id/tvBuySnackDontHaveCouponLabel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBuySnackSubTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_sub_total_s"
+                android:textColor="@color/colorGreenLight"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tvBuySnackDontHaveCouponLabel"
+                app:layout_constraintTop_toBottomOf="@id/tvBuySnackDontHaveCouponLabel"
+                tools:text="Sub Total: 10$" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBuySnackPaymentMethodLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:alpha="0.8"
+                android:text="@string/lbl_payment_method"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="@dimen/text_heading_1x"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBuySnackSubTotal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBuySnackPaymentMethods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBuySnackPaymentMethodLabel"
+                tools:itemCount="3"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/margin_xxxlarge"
+                tools:listitem="@layout/view_holder_payment_method" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnButSnackPay"
+        style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_btn_size"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:background="@drawable/background_btn_confirm"
+        android:text="@string/lbl_pay_d"
+        tools:text="Pay 40$"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:elevation="@dimen/margin_medium" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

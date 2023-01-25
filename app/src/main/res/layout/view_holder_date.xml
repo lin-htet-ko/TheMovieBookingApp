@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/margin_medium_2"
+    android:paddingVertical="@dimen/margin_medium"
+    tools:background="?attr/colorPrimary">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVhDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Wed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVhDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvVhDateText"
+        app:layout_constraintStart_toStartOf="@id/tvVhDateText"
+        app:layout_constraintTop_toBottomOf="@id/tvVhDateText"
+        tools:text="10" />
+</androidx.constraintlayout.widget.ConstraintLayout>

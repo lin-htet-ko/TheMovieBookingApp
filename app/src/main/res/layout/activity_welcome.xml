@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".activities.WelcomeActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/video_streaming" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcomeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_welcome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvWelcomeContent"
+        app:layout_constraintTop_toBottomOf="@id/ivWelcome" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcomeContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/lbl_welcome_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        app:layout_constraintBottom_toTopOf="@id/btnWelcomeGetStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeLabel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnWelcomeGetStart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_btn_size"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:background="@drawable/background_btn_get_started"
+        android:text="@string/lbl_get_started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

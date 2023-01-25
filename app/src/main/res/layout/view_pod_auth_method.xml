@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.linhtetko.themoviebookingapp.viewpods.AuthMethodViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btnAuthFb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_btn_size"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:background="@drawable/background_btn_auth"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnAuthFbIcon"
+            android:layout_width="@dimen/size_icon_general"
+            android:layout_height="@dimen/size_icon_general"
+            app:srcCompat="@drawable/ic_facebook" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAuthFbLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_sign_up_with_facebook" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btnAuthGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_btn_size"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:background="@drawable/background_btn_auth"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnAuthGoogleIcon"
+            android:layout_width="@dimen/size_icon_general"
+            android:layout_height="@dimen/size_icon_general"
+            app:srcCompat="@drawable/ic_search" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAuthGoogleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_sign_up_with_google" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:id="@+id/btnAuthConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/general_btn_size"
+        android:layout_marginVertical="@dimen/margin_medium_2"
+        android:background="@drawable/background_btn_confirm"
+        android:elevation="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAuthConfirmLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/lbl_confirm"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+    </FrameLayout>
+</com.linhtetko.themoviebookingapp.viewpods.AuthMethodViewPod>

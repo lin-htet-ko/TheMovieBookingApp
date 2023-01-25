@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/width_movie_view_holder"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivVhMovieImg"
+        android:layout_width="@dimen/width_movie_view_holder"
+        android:layout_height="@dimen/height_movie_view_holder"
+        android:elevation="@dimen/margin_medium_3"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/img_square"
+        app:srcCompat="@drawable/place_holder_pikachu" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVhMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:alpha="0.8"
+        tools:text="Detective Pikachu"
+        android:textAlignment="center"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivVhMovieImg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVhMovieGenre"
+        android:layout_width="@dimen/width_movie_view_holder"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:alpha="0.8"
+        android:textAlignment="center"
+        android:paddingHorizontal="@dimen/margin_small"
+        tools:text="Mystery/Adventure"
+        android:textSize="@dimen/text_smaller"
+        app:layout_constraintBottom_toTopOf="@id/iconVhMovieTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVhMovieName"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconVhMovieTime"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvVhMovieDuration"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVhMovieGenre"
+        app:srcCompat="@drawable/ic_baseline_access_time_24"
+        app:tint="@android:color/darker_gray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVhMovieDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:alpha="0.8"
+        tools:text="1h 45m"
+        android:textSize="@dimen/text_smaller"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iconVhMovieTime"
+        app:layout_constraintTop_toTopOf="@id/iconVhMovieTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

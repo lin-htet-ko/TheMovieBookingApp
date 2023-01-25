@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_medium"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".fragments.LoginFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_email"
+        android:textSize="@dimen/text_regular_2x"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tieLoginEmail"
+        android:layout_width="match_parent"
+        android:hint="@string/placeholder_abc_gmail_com"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_password"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:textSize="@dimen/text_regular_2x"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tieLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium"
+        android:hint="@string/placeholder_password"
+        android:inputType="textPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginVertical="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/lbl_forget_password"
+        android:textAllCaps="false"
+        android:textColor="@android:color/darker_gray" />
+
+    <include
+        android:id="@+id/vpAuthLogin"
+        layout="@layout/view_pod_auth_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
